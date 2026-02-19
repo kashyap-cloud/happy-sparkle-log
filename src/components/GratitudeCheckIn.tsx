@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft } from "lucide-react";
 
-const emojis = ["🌿", "💛", "✨"];
+const emojis = ["🌿", "💛", "🦋"];
 
 const GratitudeCheckIn = () => {
   const [items, setItems] = useState(["", "", ""]);
@@ -37,7 +37,7 @@ const GratitudeCheckIn = () => {
       <div className="flex min-h-screen flex-col items-center justify-center gap-6 animate-slide-up bg-gradient-to-br from-[hsl(30,67%,96%)] via-[hsl(40,70%,94%)] to-[hsl(20,60%,92%)]">
         <span className="text-6xl">🌻</span>
         <h2 className="text-3xl font-bold text-foreground">Gratitude logged!</h2>
-        <p className="text-lg text-muted-foreground">Keep shining ✨</p>
+        <p className="text-lg text-muted-foreground">Small moments, big joy.</p>
         <Button variant="ghost" className="rounded-full gap-2 mt-2" onClick={handleReset}>
           <ArrowLeft size={18} />
           Log Another
