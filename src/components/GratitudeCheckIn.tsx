@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft } from "lucide-react";
 
-const emojis = ["🌿", "💛", "🦋"];
+const emojis = ["🌿", "💛", "💜"];
 
 const GratitudeCheckIn = () => {
   const [items, setItems] = useState(["", "", ""]);
   const [submitted, setSubmitted] = useState(false);
 
-  const hasText = items.some((item) => item.trim().length > 0);
+  const allFilled = items.every((item) => item.trim().length > 0);
 
   const handleChange = (index: number, value: string) => {
     setItems((prev) => {
@@ -82,7 +82,7 @@ const GratitudeCheckIn = () => {
           <Button
             size="lg"
             className="w-full rounded-full font-bold text-base h-12 bg-gradient-to-r from-primary to-[hsl(35,85%,60%)] hover:from-primary/90 hover:to-[hsl(35,85%,55%)] shadow-md shadow-primary/20"
-            disabled={!hasText}
+            disabled={!allFilled}
             onClick={handleSubmit}
           >
             Log Gratitude
