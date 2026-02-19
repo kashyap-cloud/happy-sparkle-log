@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft } from "lucide-react";
 
-const emojis = ["🌿", "💛", "💜"];
+const emojis = ["💚", "💙", "💗"];
 
 const GratitudeCheckIn = () => {
   const [items, setItems] = useState(["", "", ""]);
