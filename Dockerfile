@@ -9,7 +9,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 # Copy the static files from the builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html/gratitude_log
+COPY --from=builder /app/dist /usr/share/nginx/html/gratitude_logs
 # Remove default nginx config
 RUN rm /etc/nginx/conf.d/default.conf
 COPY vite-nginx.conf /etc/nginx/conf.d/nginx.conf
